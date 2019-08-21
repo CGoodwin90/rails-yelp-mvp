@@ -1,0 +1,11 @@
+<div class="container col-6 offset-3">
+<h1>Restaurants</h1>
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li><strong>Name: </strong><%=link_to restaurant.name, restaurant_path(restaurant)  %></li>
+  <br>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a Restaurant', new_restaurant_path, class: 'btn btn-primary'  %>
+</div>
